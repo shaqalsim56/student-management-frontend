@@ -1,0 +1,12 @@
+<input type="number" [(ngModel)]="id" placeholder="Enter Student ID">
+<button (click)="getStudent()">Get Student</button>
+
+<div *ngIf="hasData">
+    <b>First Name: </b>{{student['f_name']}}<br>
+    <b>Last Name:</b>{{student['l_name']}}<br>
+    <b>Last Name:</b>{{student['email']}}<br>
+</div>
+
+<div *ngIf="!hasData">
+    <h2>No Data To Show</h2>
+</div>

@@ -1,0 +1,13 @@
+<app-admin-header></app-admin-header>
+<div *ngIf="hasData" class="info-container">
+    <p><b>Student Name: </b>{{student['first_nm']}} {{student['last_nm']}}<br></p>
+    <p><b>Student Email: </b>{{student['email']}}<br></p>
+    <p><b>Course One: </b>{{student['course_one']}}<br></p>
+    <p><b>Course Two: </b>{{student['course_two']}}<br></p>
+    <p><b>Course Three: </b>{{student['course_three']}}<br></p>
+    <p><b>Balance Owed: </b>{{student['balance'] | currency}}<br></p>
+</div>
+
+<div *ngIf="!hasData">
+    <h2>No Data To Show</h2>
+</div>

@@ -1,0 +1,54 @@
+<app-admin-header></app-admin-header>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<div>
+    <div>
+        <form #reportForm="ngForm" (ngSubmit)="getAllStudents(reportForm)" class="container d-flex p-2">
+            <label for="report_type" class="form-label">Select Report</label>
+            <select name="report_type" id="report_type" ngModel>
+                <option value="student-detail">Student Payment Detail</option>
+            </select>
+
+            <label for="dateFrom">From</label>
+            <input type="date" name="dateFrom" id="dateFrom" ngModel>
+
+            <label for="dateTo">To</label>
+            <input type="date" name="dateTo" id="dateTo" ngModel>
+
+            <input type="submit" value="View Report" class="btn btn-dark">
+
+            <button type="button" (click)="generatePDF()" class="btn btn-outline-dark">Generate Report</button>
+        </form>
+    </div> 
+</div>
+<div *ngIf="hasResults ; else noData">
+    <table id="reportData">
+        <caption>
+            <div class="title">Student Payment Reports</div>
+            <div class="date">Date: {{dateFrom | date : 'MMMM dd, yyyy'}} To {{dateTo | date : 'MMMM dd, yyyy' }}</div>
+        </caption> 
+        <tr>
+            <td>Name of Student</td>
+            <td>Balance Remaining</td>
+            <td>Date of Last Payment</td>
+            <td>Payment Amount</td>
+        </tr>
+    
+        <tr *ngFor="let student of students">
+            <td>{{student['first_nm']}} {{student['last_nm']}}</td>
+            <td>{{student['balance'] | currency}}</td>
+            <td>{{student['payment_date'] | date}}</td>
+            <td>{{student['amount'] | currency}}</td>
+        </tr>
+    </table>
+</div>
+
+
+<ng-template #noData>
+    <div class="">
+        <h1>No Records Found</h1>
+    </div>
+</ng-template>

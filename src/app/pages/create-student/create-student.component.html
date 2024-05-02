@@ -1,0 +1,21 @@
+<app-admin-header></app-admin-header>
+<h1 class="header-title">Add New Student</h1>
+
+
+<form (ngSubmit)="saveStudent(newStudentForm)" #newStudentForm="ngForm" class="create-container">
+    
+    <input type="text" name="f_n" placeholder="Enter First Name of Student" ngModel><br>
+
+    <input type="text" name="l_n" placeholder="Enter Last Name of Student" ngModel><br>
+
+    <input type="text" name="e_m" placeholder="Enter Email Address" ngModel><br>
+
+    <input type="number" name="c_one" placeholder="Enter First Course ID" ngModel><br>
+
+    <input type="number" name="c_two" placeholder="Enter Second Course ID" ngModel><br>
+
+    <input type="number" name="c_three" placeholder="Enter Third Course ID" ngModel><br>
+
+    <button>Save Student</button>
+
+</form>

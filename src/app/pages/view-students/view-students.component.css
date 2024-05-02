@@ -1,0 +1,51 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+table{
+    width: 100%;
+}
+
+table a{
+    margin: 10px;
+}
+
+table, td{
+    border-collapse: collapse;
+    border: 2px solid #000;
+    padding: 5px 9px;
+    text-align: center;
+    height: 40px;
+    font-size: 15px;
+}
+
+tr:nth-child(even) {
+    background-color: #5a1414;
+    color: #ffb612;
+    font-size: 20px;
+  }
+  tr:nth-child(odd) {
+    background-color:  #ffb612;
+    color:   #5a1414;
+    font-size: 20px;
+  }
+
+.btn-color{
+    background-color: #5a1414;
+    color: #ffb612;
+    text-align: center;
+}
+
+.add-student{
+    /* border: 2px solid red; */
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.action-links a{
+    font-size: 14px;
+}
+
+.action-links {
+width: 30%;
+}

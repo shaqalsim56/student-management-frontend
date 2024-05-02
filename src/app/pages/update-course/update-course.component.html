@@ -1,0 +1,58 @@
+<app-admin-header></app-admin-header>
+<h1 class="header-title">Update Course Information</h1>
+
+<form (ngSubmit)="editCourse(courseForm)" #courseForm="ngForm" class="update-container">
+
+    <select name="nm" ngModel>
+        <option value="">Select CXC Subject</option>
+        <option value="Mathematics">Mathematics</option>
+        <option value="English Language">English Language</option>
+        <option value="Chemistry">Chemistry</option>
+        <option value="Physics">Physics</option>
+        <option value="Biology">Biology</option>
+        <option value="History">History</option>
+        <option value="Geography">Geography</option>
+        <option value="Information Technology">Information Technology</option>
+        <option value="Principles of Accounts">Principles of Accounts</option>
+        <option value="Principles of Business">Principles of Business</option>
+        <option value="Social Studies">Social Studies</option>
+        <option value="Economics">Economics</option>
+        <option value="Caribbean History">Caribbean History</option>
+        <option value="Spanish">Spanish</option>
+        <option value="French">French</option>
+        <option value="Additional Mathematics">Additional Mathematics</option>
+        <option value="Agricultural Science">Agricultural Science</option>
+        <option value="Art and Design">Art and Design</option>
+        <option value="Building Technology">Building Technology</option>
+        <option value="Caribbean Studies">Caribbean Studies</option>
+        <option value="Clothing and Textiles">Clothing and Textiles</option>
+        <option value="Electrical and Electronic Technology">Electrical and Electronic Technology</option>
+        <option value="Food and Nutrition">Food and Nutrition</option>
+        <option value="Home Economics Management">Home Economics Management</option>
+        <option value="Industrial Technology">Industrial Technology</option>
+        <option value="Integrated Science">Integrated Science</option>
+        <option value="Music">Music</option>
+        <option value="Physical Education and Sport">Physical Education and Sport</option>
+        <option value="Technical Drawing">Technical Drawing</option>
+    </select><br>
+    
+
+    <label for="t_i"><h3>Teacher ID: </h3></label>
+    <input type="text"name="t_i" ngModel><br>
+
+    <select name="lvl" ngModel>
+        <option value="">Select Course Level</option>
+        <option value="CSEC">CSEC</option>
+        <option value="CAPE">CAPE</option>
+    </select><br>
+
+    <label for="prc"><h3>Price:  </h3></label>
+    <input type="text" name="prc" ngModel><br>
+
+    <button class="btn btn-color ">Update</button>
+
+</form>
+
+<div class="danger" *ngIf="hasError">
+    Error Updating
+</div>

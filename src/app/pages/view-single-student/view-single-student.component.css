@@ -1,0 +1,13 @@
+.info-container{
+    width: 40%;
+    text-align: center;
+    margin: auto;
+    font-size: 25px;
+    border-radius: 20px;
+    background-color: #5a1414;
+    color: #ffb612;
+}
+
+p{
+    margin-bottom: 30px;
+}

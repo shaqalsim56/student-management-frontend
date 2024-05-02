@@ -1,0 +1,18 @@
+<app-admin-header></app-admin-header>
+<div *ngIf="hasData" class="info-container">
+    <p class="header-title"><b>{{student['first_nm']}} {{student['last_nm']}}</b><br></p>
+</div>
+
+<div *ngIf="!hasData">
+    <h2>No Data To Show</h2>
+</div>
+
+<form (ngSubmit)="savePayment(newPaymentForm)" #newPaymentForm="ngForm" class="create-container">
+    
+    <input type="number" name="student_id" placeholder="Enter Student ID" [(ngModel)]="id"><br>
+
+    <input type="text" name="amount" placeholder="Enter Payment Amount" ngModel><br>
+
+    <button>Make Payment</button>
+
+</form>

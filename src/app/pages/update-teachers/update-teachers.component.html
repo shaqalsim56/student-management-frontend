@@ -1,0 +1,28 @@
+<app-admin-header></app-admin-header>
+<h1 class="header-title">Update Teacher Information</h1>
+
+<form (ngSubmit)="editTeacher(teacherForm)" #teacherForm="ngForm" class="update-container">
+
+    <label for="f_n"><h3>First Name: </h3></label>
+    <input type="text" name="f_n" ngModel><br>
+
+    <label for="l_n"><h3>Last Name: </h3></label>
+    <input type="text"name="l_n" ngModel><br>
+
+    <label for="e_m"><h3>Email Address:  </h3></label>
+    <input type="text" name="e_m" ngModel><br>
+
+    <label for="c_one"><h3>Course One:  </h3></label>
+    <input type="number" name="c_one" ngModel><br>
+
+    <label for="c_two"><h3>Course Two:  </h3></label>
+    <input type="number" name="c_two" ngModel><br>
+
+    <button class="btn btn-color ">Update</button>
+
+
+</form>
+
+<div class="danger" *ngIf="hasError">
+    Error Updating
+</div>
