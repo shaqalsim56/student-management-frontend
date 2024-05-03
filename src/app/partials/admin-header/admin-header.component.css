@@ -1,13 +1,33 @@
-.header{
+.header {
     background-color: #5a1414;
     color: #ffb612;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 14px 16px;
     margin-bottom: 30px;
 }
 
-.header a{
+.header a {
     text-decoration: none;
     color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li a {
+    display: block;
+    color: #ffb612;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.header a:hover:not(.active) {
+    background-color: #2a0e0e;
+}
+
+.active {
+    background-color: #5a1414;
 }
