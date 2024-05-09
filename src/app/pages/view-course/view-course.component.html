@@ -1,0 +1,11 @@
+<app-admin-header></app-admin-header>
+<h1 class="header-title">View Course Data</h1>
+<div *ngIf="hasData" class="info-container">
+    <p><b> Name of Course: </b>{{course['course_name']}}<br></p>
+    <p><b> Type of Course: </b>{{course['abbreviation']}}<br></p>
+    <p><b> Price of Course: </b>{{course['price'] | currency}}<br></p>
+</div>
+
+<div *ngIf="!hasData">
+    <h2>No Data To Show</h2>
+</div>

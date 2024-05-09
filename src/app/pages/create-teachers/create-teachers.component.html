@@ -1,5 +1,5 @@
 <app-admin-header></app-admin-header>
-<h1 class="header-title">Add New Student</h1>
+<h1 class="header-title">Add New Teacher</h1>
 
 
 <form (ngSubmit)="saveTeacher(newTeacherForm)" #newTeacherForm="ngForm" class="create-container">
@@ -10,6 +10,10 @@
 
     <input type="text" name="e_m" placeholder="Enter Email Address" ngModel><br>
 
-    <button>Save Teacher</button>
+    <input type="number" name="c_one" placeholder="Enter First Course ID" ngModel><br>
+
+    <input type="number" name="c_two" placeholder="Enter Second Course ID" ngModel><br>
+
+    <button class="btn btn-color">Save Teacher</button>
 
 </form>

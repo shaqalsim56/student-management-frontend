@@ -11,11 +11,11 @@
 
     <tr *ngFor="let course of courses">
         <td>{{course['course_name']}}</td>
-        <td>{{course['exams.id']}}</td>
+        <td>{{course['abbreviation']}}</td>
         <td>
-            <a routerLink="/view-course/{{ course['id'] }}" class="btn btn-light">View</a>
-            <a routerLink="/update-course/{{course['id']}}" class="btn btn-light">Update</a>
-            <a routerLink="/delete-course/{{course['id']}}" class="btn btn-light">Delete</a>
+            <a routerLink="/view-course/{{ course['id'] }}" class="btn btn-light">View Course</a>
+            <a routerLink="/update-course/{{course['id']}}" class="btn btn-light">Update Course</a>
+            <a routerLink="/delete-course/{{course['id']}}" class="btn btn-light">Remove Course</a>
         </td>
     </tr>
 </table>

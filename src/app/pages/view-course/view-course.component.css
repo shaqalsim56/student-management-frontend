@@ -1,0 +1,22 @@
+.info-container{
+    width: 40%;
+    text-align: center;
+    margin: auto;
+    font-size: 25px;
+    border-radius: 20px;
+    background-color: #5a1414;
+    color: #ffb612;
+}
+
+p{
+    margin-bottom: 30px;
+}
+
+.header-title{
+    margin-bottom: 40px;
+    background-color:  #ffb612;
+    color:#5a1414 ;
+    padding: 20px;
+    font-weight: 700;
+    text-align: center;
+}

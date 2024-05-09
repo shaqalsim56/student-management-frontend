@@ -30,8 +30,8 @@ export class DeleteTeachersComponent implements OnInit {
       this.id = this.route.snapshot.params['id']
       const teacherData = this.teacherService.getTeacher(this.id).subscribe( res => {
         if (res['status'] !== 'error'){
-          console.log(res['data']);
-         const teachData = res['data']
+          console.log(res['teachers']);
+         this.teacher = res['teachers']
           this.hasData = true;
         }else{
           this.hasData = false; 

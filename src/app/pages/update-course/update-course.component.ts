@@ -29,15 +29,13 @@ export class UpdateCourseComponent {
       this.id = this.route.snapshot.params['id']
       const courseData = this.courseService.getCourse(this.id).subscribe( res => {
         if (res['status'] !== 'error'){
-         const courseData = res['data'] ['courses'];
+         const courseData = res ['courses'];
 
          console.log(JSON.stringify(res));
 
          this.courseForm?.setValue({
-           nm: courseData['name'],
-           t_i: courseData['teacher_id'],
-           lvl: courseData['level'],
-           prc: courseData['price'],
+           course_name: courseData['course_name'],
+           exam: courseData['exam'],
          })
           this.hasData = true;
         }else{

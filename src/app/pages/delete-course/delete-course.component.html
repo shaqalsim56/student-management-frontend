@@ -1,0 +1,17 @@
+<app-admin-header></app-admin-header>
+<h1 class="header-title">Delete Course</h1>
+
+<form (ngSubmit)="deleteCourse(CourseForm)" #CourseForm="ngForm" class="delete-container">
+
+    <div class="info-container">
+        <p><b>Course Name: </b>{{course['course_name']}}<br></p>
+        <p><b>Type of Course: </b>{{course['abbreviation']}}<br></p>
+    </div>
+
+    <button class="btn btn-color ">Delete</button>
+
+</form>
+
+<div class="danger" *ngIf="hasError">
+    Error Updating
+</div>

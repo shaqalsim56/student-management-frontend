@@ -1,9 +1,8 @@
 <app-admin-header></app-admin-header>
 <h1 class="header-title">Update Course Information</h1>
-
 <form (ngSubmit)="editCourse(courseForm)" #courseForm="ngForm" class="update-container">
 
-    <select name="nm" ngModel>
+    <select name="c_n" ngModel>
         <option value="">Select CXC Subject</option>
         <option value="Mathematics">Mathematics</option>
         <option value="English Language">English Language</option>
@@ -35,19 +34,12 @@
         <option value="Physical Education and Sport">Physical Education and Sport</option>
         <option value="Technical Drawing">Technical Drawing</option>
     </select><br>
-    
 
-    <label for="t_i"><h3>Teacher ID: </h3></label>
-    <input type="text"name="t_i" ngModel><br>
-
-    <select name="lvl" ngModel>
+    <select name="a_b" ngModel>
         <option value="">Select Course Level</option>
         <option value="CSEC">CSEC</option>
         <option value="CAPE">CAPE</option>
     </select><br>
-
-    <label for="prc"><h3>Price:  </h3></label>
-    <input type="text" name="prc" ngModel><br>
 
     <button class="btn btn-color ">Update</button>
 

@@ -7,14 +7,14 @@ import { TeachersService } from 'src/app/services/teachers.service';
   templateUrl: './view-teacher.component.html',
   styleUrls: ['./view-teacher.component.css']
 })
-export class ViewTeacherComponent {
-  teachers = [];
+export class ViewTeacherComponent implements OnInit{
+
+  ngOnInit(): void {
+    this.getTeacher();
+  }
+
   constructor(private route: ActivatedRoute,
     private teacherService: TeachersService){}
-
-    ngOnInit(): void {
-      this.getTeacher();
-    }
 
     id: number = 0;
     teacher: any;
@@ -25,9 +25,9 @@ export class ViewTeacherComponent {
       const teacherData = this.teacherService.getTeacher(this.id).subscribe( res => {
         console.log(res['status']);
         console.log(res['results']);
-        console.log(res['data']);
+        console.log(res['teacher']);
         if (res['status'] !== 'error'){
-          this.teacher = res['data'] ['teachers'];
+          this.teacher = res['teacher'];
           this.hasData = true;
         }
         

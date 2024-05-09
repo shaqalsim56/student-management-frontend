@@ -25,6 +25,7 @@ export class ViewSingleStudentComponent implements OnInit {
       const studentData = this.studentService.getStudent(this.id).subscribe( res => {
         console.log(res['status']);
         console.log(res['results']);
+        console.log(res['students']);
         if (res['status'] !== 'error'){
           this.student = res ['students'];
           this.hasData = true;

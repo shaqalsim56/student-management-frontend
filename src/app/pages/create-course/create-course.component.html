@@ -1,10 +1,7 @@
 <app-admin-header></app-admin-header>
-<h1 class="header-title">Add New Student</h1>
-
-
+<h1 class="header-title">Add New Course</h1>
 <form (ngSubmit)="saveCourse(newCourserForm)" #newCourserForm="ngForm" class="create-container">
-    
-    <select name="nm" ngModel>
+    <select name="course_name" ngModel>
         <option value="">Select CXC Subject</option>
         <option value="Mathematics">Mathematics</option>
         <option value="English Language">English Language</option>
@@ -36,13 +33,11 @@
         <option value="Physical Education and Sport">Physical Education and Sport</option>
         <option value="Technical Drawing">Technical Drawing</option>
     </select><br>
-
-    <input type="number" name="t_i" placeholder="Enter Exam Level" ngModel lim><br>
-
-
-    <input type="text" name="prc" placeholder="Enter Price of Course" ngModel><br>
-
+    <select name="exam" ngModel>
+        <option value="">Select Course Level</option>
+        <option value="1">CSEC</option>
+        <option value="2">CAPE</option>
+    </select><br>
     <button>Save Course</button>
-
 </form>
 

@@ -1,0 +1,40 @@
+*{
+    text-align: center;
+}
+
+.header-title{
+    margin-bottom: 40px;
+    background-color: #5a1414;
+    color: #ffb612;
+    padding: 20px;
+}
+
+.delete-container{
+    /* border: 2px solid red; */
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+input{
+    margin-bottom: 15px;
+    width: 40%;
+
+    padding: 5px;
+    border-radius: 30px;
+    border: 2px solid #5a1414;
+    background-color: #ffb612;
+    
+}
+
+.btn-color{
+    background-color: #5a1414;
+    color: #ffb612;
+}
+
+select{
+    margin-bottom: 15px;
+    width: 40%;
+    border-radius: 30px;
+    padding: 5px;
+}

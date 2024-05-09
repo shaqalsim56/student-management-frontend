@@ -25,6 +25,9 @@ import { UpdateCourseComponent } from './pages/update-course/update-course.compo
 import { PaymentComponent } from './pages/payment/payment.component';
 import { ReportSelectorComponent } from './reports/report-selector/report-selector.component';
 import { ReportViewerComponent } from './reports/report-viewer/report-viewer.component';
+import { HomeBackgroundComponent } from './partials/home-background/home-background.component';
+import { ViewCourseComponent } from './pages/view-course/view-course.component';
+import { DeleteCourseComponent } from './pages/delete-course/delete-course.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +52,9 @@ import { ReportViewerComponent } from './reports/report-viewer/report-viewer.com
     PaymentComponent,
     ReportSelectorComponent,
     ReportViewerComponent,
+    HomeBackgroundComponent,
+    ViewCourseComponent,
+    DeleteCourseComponent,
   ],
   imports: [
     BrowserModule,

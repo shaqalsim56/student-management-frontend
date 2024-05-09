@@ -29,7 +29,8 @@ export class UpdateTeachersComponent implements OnInit {
       this.id = this.route.snapshot.params['id']
       const teacherData = this.teacherService.getTeacher(this.id).subscribe( res => {
         if (res['status'] !== 'error'){
-         const teachData = res['data'] ['teachers'];
+          console.log(res['teacher'])
+         const teachData = res['teacher'];
 
          console.log(JSON.stringify(res));
 

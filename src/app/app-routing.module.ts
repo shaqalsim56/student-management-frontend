@@ -19,6 +19,8 @@ import { UpdateCourseComponent } from './pages/update-course/update-course.compo
 import { PaymentComponent } from './pages/payment/payment.component';
 import { ReportSelectorComponent } from './reports/report-selector/report-selector.component';
 import { ReportViewerComponent } from './reports/report-viewer/report-viewer.component';
+import { ViewCourseComponent } from './pages/view-course/view-course.component';
+import { DeleteCourseComponent } from './pages/delete-course/delete-course.component';
 
 
 const routes: Routes = [
@@ -40,6 +42,8 @@ const routes: Routes = [
   {path: 'view-courses', title: 'View Courses', component: ViewCoursesComponent},
   {path: 'create-course', title: 'Create Course', component: CreateCourseComponent},
   {path: 'update-course/:id', title: 'Update Course', component: UpdateCourseComponent},
+  {path: 'view-course/:id', title: 'View Course', component: ViewCourseComponent}, 
+  {path: 'delete-course/:id', title: 'Delete Course', component: DeleteCourseComponent}, 
 
 
   {path: 'payment/:id', title: 'Make Payment', component: PaymentComponent},

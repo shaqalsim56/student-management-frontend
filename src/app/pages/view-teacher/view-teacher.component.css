@@ -11,3 +11,12 @@
 p{
     margin-bottom: 30px;
 }
+
+.header-title{
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 40px;
+    background-color:  #ffb612;
+    color: #5a1414;
+    padding: 20px;
+}
