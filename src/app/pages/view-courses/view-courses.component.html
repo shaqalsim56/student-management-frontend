@@ -1,14 +1,27 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<app-admin-header></app-admin-header>
-<table>
-    <tr>
-        <td>Course Name</td>
-        <td>Exam</td>
-        <td>Actions</td>
-    </tr>
+<div class="back">
+    <app-admin-header></app-admin-header>
+    <table>
+        <tr>
+            <th>Course Name</th>
+            <th>Exam</th>
+            <th>Actions</th>
+        </tr>
 
+<<<<<<< HEAD
+        <tr *ngFor="let course of courses">
+            <td>{{course['course_name']}}</td>
+            <td>{{course['exams.id']}}</td>
+            <td>
+                <a routerLink="/view-course/{{ course['id'] }}" class="btn btn-light">View</a>
+                <a routerLink="/update-course/{{course['id']}}" class="btn btn-light">Update</a>
+                <a routerLink="/delete-course/{{course['id']}}" class="btn btn-light">Delete</a>
+            </td>
+        </tr>
+    </table>
+=======
     <tr *ngFor="let course of courses">
         <td>{{course['course_name']}}</td>
         <td>{{course['abbreviation']}}</td>
@@ -19,7 +32,10 @@
         </td>
     </tr>
 </table>
+>>>>>>> c3e8de4027f8d8188511ec5616cd11e79bdc50da
 
-<div class="add-student">
-    <a routerLink="/create-course" class="btn btn-color">Add New Course</a>
+    <div class="add-student">
+        <a routerLink="/create-course" class="btn btn-color">Add New Course</a>
+    </div>
+
 </div>
