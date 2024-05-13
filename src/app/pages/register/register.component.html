@@ -1,0 +1,52 @@
+<div class="wrapper">
+    <div class="title">Student Registration Form
+    </div>
+    <form action="javascript:void(0)" (submit)="send()">
+        <div class="form" [formGroup]="form">
+
+            <div class="inputfield">
+                <label>Full Name</label>
+                <input formControlName="to_name" type="text" class="input" id="name" name="fname" placeholder="Enter full name" maxlength="30">
+            </div>
+
+            <div class="inputfield" id="gender">
+                <label for="">Gender</label>
+                <input type="radio" name="gender" id="radio" value="Male">Male
+                <input type="radio" name="gender" id="radio" value="Female">Female
+            </div>
+
+            <div class="inputfield">
+                <label for="">Age</label>
+                <input type="text" class="input" name="age" placeholder="Enter your age" maxlength="2">
+            </div>
+
+            <div class="inputfield">
+                <label for="">Date of Birth</label>
+                <input type="date" class="input" name="dob" required>
+            </div>
+
+            <div class="inputfield">
+                <label>Email Address</label>
+                <input formControlName="to_email" type="email" class="input" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="inputfield">
+                <label>Password</label>
+                <input type="password" class="input" id="password" name="" placeholder="Enter your password min 8 characters" autocomplete="off" onkeyup='check()' maxlength="100" minlength="8" required>
+            </div>
+
+            <div class="inputfield">
+                <label>Confirm Password</label>
+                <input type="password" onkeyup='check()' class="input" id="confirm-password" name="" placeholder="Confirm password" autocomplete="off" maxlength="100" minlength="8" required>
+            </div>
+
+            <p id="message"></p>
+            <!-- {{form.value | json}} -->
+            <div class="inputfield btns" id="btn">
+                <button type="submit" class="btn">Register</button>
+                <button type="reset" value="Reset" class="btn">Reset</button>
+            </div>
+
+        </div>
+    </form>
+</div>
